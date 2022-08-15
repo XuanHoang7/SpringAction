@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Taco Cloud</title>
-    <link rel="stylesheet" th:href="@{/styles.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
     <form method="POST" th:action="@{/orders}" th:object="${tacoOrder}">
@@ -18,6 +18,42 @@
                 <span th:text="${taco.name}">taco name</span>
             </li>
         </ul>
+
+        <h3>Deliver my taco masterpieces to...</h3>
+        <label for="deliveryName">Name: </label>
+        <input id="deliveryName" type="text" th:field="*{deliveryName}">
+        <br/>
+
+        <label for="deliveryStreet">Street address: </label>
+        <input id="deliveryStreet" type="text" th:field="*{deliveryStreet}">
+        <br/>
+
+        <label for="deliveryCity">City: </label>
+        <input id="deliveryCity" type="text" th:field="*{deliveryCity}">
+        <br/>
+
+        <label for="deliveryState">State: </label>
+        <input id="deliveryState" type="text" th:field="*{deliveryState}">
+        <br/>
+
+        <label for="deliveryZip">Zip code: </label>
+        <input id="deliveryZip" type="text" th:field="*{deliveryZip}">
+        <br/>
+
+        <h3>Here's how I'll pay...</h3>
+        <label for="ccNumber">Credit Card #: </label>
+        <input type="text" id="ccNumber" th:field="*{ccNumber}"/>
+        <br/>
+
+        <label for="ccExpiration">Expiration: </label>
+        <input id="ccExpiration" type="text" th:field="*{ccExpiration}">
+        <br/>
+
+        <label for="ccCVV">CVV: </label>
+        <input id="ccCVV" type="text" th:field="*{ccCVV}">
+        <br/>
+
+        <input type="submit"/>
     </form>
 </body>
 </html>
