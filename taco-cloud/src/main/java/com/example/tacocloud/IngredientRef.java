@@ -1,4 +1,4 @@
-package com.example.tacocloud.data;
+package com.example.tacocloud;
 
 import com.example.tacocloud.Ingredient;
 import lombok.Data;
